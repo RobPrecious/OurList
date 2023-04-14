@@ -55,7 +55,7 @@ export default function RealtimeListItems({
     return () => {
       supabase.removeChannel(channel)
     }
-  }, [supabase, setListItems, list_items])
+  }, [supabase, setListItems, list_items, list_id])
 
   return (
     <ul className="flex gap-4 flex-wrap">

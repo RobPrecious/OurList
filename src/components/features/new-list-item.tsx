@@ -10,7 +10,7 @@ export default function NewListItem({ list_id }: { list_id: string }) {
       new FormData(e.currentTarget)
     )
 
-    await fetch("http://localhost:3000/api/list_item", {
+    await fetch("/api/list_item", {
       method: "post",
       body: JSON.stringify({ content, list_id }),
     })

@@ -10,7 +10,7 @@ export default function NewList() {
       new FormData(e.currentTarget)
     )
 
-    await fetch("http://localhost:3000/api/lists", {
+    await fetch("/api/lists", {
       method: "post",
       body: JSON.stringify({ name, description }),
     })
