@@ -57,7 +57,7 @@ export default function RealtimeListItems({
   }, [supabase, setListItems, list_items, list_id])
 
   return (
-    <ul className="flex gap-4 flex-wrap">
+    <ul className="flex gap-4 flex-wrap flex-col sm:flex-row">
       <li className="rounded shadow border border-slate-100 flex-1">
         <NewListItem list_id={list_id} />
       </li>

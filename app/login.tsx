@@ -23,7 +23,7 @@ export default function Login() {
   }
 
   return (
-    <div className="bg-slate-800 text-white mx-auto w-[400px] rounded-xl p-8 shadow">
+    <div className="bg-slate-800 text-white mx-auto w-screen sm:w-[400px] rounded-xl p-8 shadow h-full sm:h-auto">
       <h2 className="font-bold text-xl">Login</h2>
       <Auth
         supabaseClient={supabase}

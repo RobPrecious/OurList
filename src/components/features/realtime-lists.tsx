@@ -37,7 +37,7 @@ export default function RealtimeLists({
   }, [supabase, setLists, lists])
 
   return (
-    <ul className="flex gap-4 flex-wrap">
+    <ul className="flex gap-4 flex-wrap flex-col sm:flex-row">
       <li className="rounded shadow border border-slate-100 flex-1">
         <NewList />
       </li>
