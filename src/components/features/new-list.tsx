@@ -10,10 +10,15 @@ export default function NewList() {
       new FormData(e.currentTarget)
     )
 
-    await fetch("/api/lists", {
-      method: "post",
-      body: JSON.stringify({ name, description }),
-    })
+    try {
+      const response = await fetch("/api/lists", {
+        method: "post",
+        body: JSON.stringify({ name, description }),
+      })
+      console.log(response.statusText)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (

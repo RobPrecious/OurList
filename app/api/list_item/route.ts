@@ -15,7 +15,6 @@ export async function POST(request: Request) {
   const { data: session } = await supabase.auth.getSession()
   if (session.session?.user.id) {
     const { data, error } = await supabase.from("list_item").insert({ content, list_id, created_by: session.session?.user.id }).select()
-    console.log(data)
     return NextResponse.json(data)
 
   }
