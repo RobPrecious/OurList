@@ -44,7 +44,6 @@ export default function RealtimeListItems({
           filter: `list_id=eq.${list_id}`,
         },
         (payload) => {
-          console.log(payload)
           setListItems((list_items) => {
             return [...list_items.filter((item) => item.id !== payload.old.id)]
           })

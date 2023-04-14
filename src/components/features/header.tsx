@@ -14,6 +14,7 @@ export default function Header() {
   const handleLogout = async () => {
     await supabase.auth.signOut()
   }
+
   return (
     <header className="flex w-screen h-20 items-center justify-between p-4 shadow mb-4">
       <Link href="/">

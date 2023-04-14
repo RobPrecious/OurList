@@ -33,8 +33,14 @@ export default function SupabaseProvider({
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async () => {
-      setSession((await supabase.auth.getSession()).data.session)
-      router.push(pathname)
+      const session = (await supabase.auth.getSession()).data.session
+      setSession(session)
+      if (session) {
+        router.push(pathname)
+      } else {
+        router.push("/")
+        router.refresh()
+      }
     })
 
     return () => {
